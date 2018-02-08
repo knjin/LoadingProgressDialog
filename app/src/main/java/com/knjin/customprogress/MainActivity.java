@@ -41,5 +41,13 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+        int i = 0;
+        @DialogType int type;
+        switch(i){
+            case DialogType.NEW_WATTING:
+                break;
+            case DialogType.CHECK_NOW:
+                break;
+        }
     }
 }
