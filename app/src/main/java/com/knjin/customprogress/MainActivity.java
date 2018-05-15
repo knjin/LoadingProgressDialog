@@ -3,13 +3,17 @@ package com.knjin.customprogress;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.knjin.customprogress.leetcode.ReverseInteger;
+import com.knjin.customprogress.leetcode.Zigzag;
 import pl.tajchert.sample.DotsTextView;
 
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
     DotsTextView dotsTextView;
     Button btn;
     Button load;
@@ -18,6 +22,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         dotsTextView = (DotsTextView) findViewById(R.id.dots);
+        //Zigzag.convert("PAYPALISHIRING", 4);
+        try {
+            long num = ReverseInteger.reverse(96463243);
+            Log.e(TAG, "onCreate: " + num);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         btn  = (Button) findViewById(R.id.btn);
         load = (Button) findViewById(R.id.loading);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -50,4 +61,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+
+
 }
